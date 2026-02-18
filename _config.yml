@@ -1,130 +1,45 @@
-# Site settings
-title: "Toolary - 24 Productivity Tools for Modern Web | Free Chrome Extension"
-description: "Download Toolary - the ultimate Chrome extension with 24 web productivity tools including AI-powered features, color picker, screenshot tool, PDF generator, QR code creator, and more. Free download for Chrome browser."
-url: "https://toolary.ademisler.com"
+title: "Toolboard - 82 Web Productivity Tools for Chrome"
+description: "Toolboard is a Chrome extension with 82 tools across inspect, capture, enhance, utilities, converters, previewers, and AI."
+keywords: "chrome extension, web productivity tools, inspect tools, capture tools, converters, previewers, ai tools"
+url: "https://toolboard.ademisler.com"
 baseurl: ""
-
-# SEO settings
 lang: "en"
-timezone: "UTC"
+logo: "/assets/images/favicon-512x512.png"
+timezone: "Europe/Istanbul"
 encoding: "utf-8"
-
-# Build settings
 markdown: kramdown
 highlighter: rouge
 theme: minima
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
 
-# SEO settings
-author: "Adem İşler"
-twitter: "@idemasler"
-github: "ademisler"
-linkedin: "idemasler"
-
-# SEO and Social Media
-google_site_verification: ""
+author: "Adem Isler"
 twitter_username: "idemasler"
 github_username: "ademisler"
-linkedin_username: "idemasler"
 
-# Site verification
-google_analytics: ""
-google_analytics_id: ""
-bing_site_verification: ""
-yandex_site_verification: ""
+social:
+  name: "Toolboard"
+  links:
+    - "https://github.com/ademisler"
+    - "https://ademisler.com/en"
+    - "https://buymeacoffee.com/ademisler"
 
-# SEO Settings
-sitemap:
-  changefreq: weekly
-  priority: 0.8
-  lastmod: 2024-12-27
-
-# Feed settings
-feed:
-  posts_limit: 10
-  excerpt_only: true
-
-# SEO plugins
-plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-robots-tag
-
-# Exclude files from processing
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-  - .sass-cache
-  - .jekyll-cache
-  - .jekyll-metadata
-  - .git
-  - .gitignore
-  - .DS_Store
-  - Thumbs.db
-
-# Site configuration
-timezone: Europe/Istanbul
-lang: en
-encoding: utf-8
-
-# Collections (disabled - using regular pages)
-# collections:
-#   tools:
-#     output: true
-#     permalink: /tools/:name/
-
-# Defaults
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "default"
-      author: "Adem İşler"
+      author: "Adem Isler"
+      image: "/assets/images/favicon-512x512.png"
 
-# Exclude from processing
 exclude:
   - README.md
   - node_modules
   - Gemfile
   - Gemfile.lock
-  - package.json
-  - package-lock.json
   - .gitignore
   - .DS_Store
-  - extension/
-  - test/
-  - coverage/
-  - toolary-v2.0.0.zip
-  - son.zip
-
-# Include
-include:
-  - _pages
-
-# Sass configuration
-sass:
-  sass_dir: assets/css
-  style: compressed
-
-# Jekyll SEO Tag
-social:
-  name: "Toolary"
-  links:
-    - "https://github.com/ademisler"
-    - "https://ademisler.com/en"
-    - "https://buymeacoffee.com/ademisler"
-
-# Google Analytics (add your tracking ID)
-# google_analytics: UA-XXXXXXXXX-X
-
-# Disqus (add your shortname)
-# disqus:
-#   shortname: your-disqus-shortname

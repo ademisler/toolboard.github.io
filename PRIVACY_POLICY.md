@@ -1,8 +1,8 @@
-# Toolary Privacy Policy
+# Toolboard Privacy Policy
 
-_Effective date: Toolary v2.0.0_
+_Effective date: Toolboard v2.0.0_
 
-Toolary is built with a privacy-first approach. The extension operates entirely within your browser and never sends page data, notes, or usage information to external servers (except for AI features which require API calls to Google's Gemini service).
+Toolboard is built with a privacy-first approach. The extension operates entirely within your browser and never sends page data, notes, or usage information to external servers (except for AI features which require API calls to Google's Gemini service).
 
 ## Data Collection
 
@@ -18,13 +18,13 @@ Toolary is built with a privacy-first approach. The extension operates entirely 
 | Dark mode preferences | Yes | `chrome.storage.local` | Remember your theme preference |
 | Onboarding completion status | Yes | `chrome.storage.local` | Track if user has completed the onboarding tour |
 | Page content, colors, fonts, links | No (in-memory only) | N/A | Processed on demand, never persisted or transmitted |
-| Diagnostic telemetry | No | N/A | Toolary does not send analytics or crash reports |
+| Diagnostic telemetry | No | N/A | Toolboard does not send analytics or crash reports |
 
 ### Sticky Notes
 Notes are stored under keys prefixed with `toolaryStickyNotes_` in `chrome.storage.local`. Legacy keys (`stickyNotes_`) are migrated automatically. You can remove notes via the sticky notes manager or by clearing the associated keys in Chrome storage.
 
 ### AI Features
-Toolary includes AI-powered tools that use Google's Gemini API. When you use AI features:
+Toolboard includes AI-powered tools that use Google's Gemini API. When you use AI features:
 
 - **Content Processing**: Selected text or page content is sent to Google's Gemini API for processing
 - **API Keys**: Your Gemini API keys are encrypted using AES-GCM encryption and stored locally in `chrome.storage.local` - never shared
@@ -43,7 +43,7 @@ The Copy History Manager tracks clipboard content per domain for quick access:
 - **Manual Control**: You can clear history for specific domains or all domains
 
 ### Coffee Toast System
-Toolary displays coffee-themed messages after successful tool operations:
+Toolboard displays coffee-themed messages after successful tool operations:
 
 - **Message Data**: All messages are stored locally, never sent to external servers
 - **Language Detection**: Your browser language is automatically detected
@@ -51,7 +51,7 @@ Toolary displays coffee-themed messages after successful tool operations:
 - **No Data Collection**: Toast interactions are not tracked or stored
 
 ### Onboarding System
-Toolary includes an interactive onboarding system for new users:
+Toolboard includes an interactive onboarding system for new users:
 
 - **Completion Status**: Whether you've completed the onboarding tour is stored locally
 - **No Personal Data**: The onboarding system only tracks completion status, not personal information
@@ -60,10 +60,10 @@ Toolary includes an interactive onboarding system for new users:
 
 ## Permissions Explained
 
-Toolary requests the following permissions to provide its full functionality:
+Toolboard requests the following permissions to provide its full functionality:
 
 ### Core Permissions
-- **`activeTab`** – Required to inject content scripts when you activate tools. This permission allows Toolary to access the current tab's content only when you explicitly activate a tool.
+- **`activeTab`** – Required to inject content scripts when you activate tools. This permission allows Toolboard to access the current tab's content only when you explicitly activate a tool.
 - **`scripting`** – Needed to inject content scripts into web pages for tool functionality (element inspection, text extraction, etc.).
 - **`storage`** – Used for all local data storage including favorites, settings, notes, and tool preferences.
 
@@ -79,10 +79,10 @@ Toolary requests the following permissions to provide its full functionality:
 - **`tabCapture`** – Required specifically for Video Recorder tool to capture screen activity and browser tab content.
 
 ### Host Permissions
-- **`<all_urls>`** – Required for content script injection on all websites. This allows Toolary to work on any website you visit, but the extension only accesses page content when you explicitly activate a tool.
+- **`<all_urls>`** – Required for content script injection on all websites. This allows Toolboard to work on any website you visit, but the extension only accesses page content when you explicitly activate a tool.
 
 ### Web Accessible Resources
-Toolary exposes the following resources to web pages:
+Toolboard exposes the following resources to web pages:
 - **Core modules** (`core/*.js`) – Essential functionality modules
 - **Shared utilities** (`shared/*.js`) – Common helper functions
 - **Tool modules** (`tools/*/*.js`) – Individual tool implementations
@@ -113,14 +113,14 @@ Toolary exposes the following resources to web pages:
 - **Purpose:** Process page content with AI services (requires external API calls to Google Gemini)
 
 ### Security Considerations
-- **No Background Access:** Toolary only accesses page content when you explicitly activate a tool
+- **No Background Access:** Toolboard only accesses page content when you explicitly activate a tool
 - **Local Processing:** All data processing happens locally in your browser
 - **No Data Transmission:** Except for AI features (which use your own API keys), no data is sent to external servers
 - **Minimal Permissions:** Each permission is directly tied to specific tool functionality
 
 ## Third Parties
 
-Toolary does **not** rely on external services, trackers, or CDNs for core functionality. All code ships with the extension bundle and runs locally.
+Toolboard does **not** rely on external services, trackers, or CDNs for core functionality. All code ships with the extension bundle and runs locally.
 
 **Exceptions**:
 - **AI Features**: AI-powered tools require API calls to Google's Gemini service when you choose to use AI features. These calls are made directly from your browser to Google's servers using your own API keys.
@@ -140,13 +140,13 @@ Toolary does **not** rely on external services, trackers, or CDNs for core funct
 - Remove AI API keys through the AI settings panel
 - Clear copy history for specific domains or all domains via the Copy History Manager
 - Clear bookmarks and highlights through their respective managers
-- Clear Toolary data via Chrome's extension storage management (`chrome://settings/siteData` → search "toolary")
+- Clear Toolboard data via Chrome's extension storage management (`chrome://settings/siteData` → search "toolboard")
 - Remove the extension at any time to delete all associated storage
 
 ## Data Retention
 
 - **Local Storage**: All data remains on your device until manually cleared
-- **No Sync Storage**: Toolary does not use Chrome's sync storage - all data is stored locally
+- **No Sync Storage**: Toolboard does not use Chrome's sync storage - all data is stored locally
 - **Copy History**: Automatically limited to 50 items per domain
 - **Tool Usage**: Stored locally for sorting purposes
 - **AI Interactions**: Not stored - each request is processed independently
@@ -159,4 +159,4 @@ Updates are delivered through the Chrome Web Store. Each release is accompanied 
 
 For privacy-related questions or issues please open an issue on the GitHub repository or reach out via https://ademisler.com.
 
-Toolary may revise this policy for future releases. The version number at the top of this document indicates the latest update.
+Toolboard may revise this policy for future releases. The version number at the top of this document indicates the latest update.

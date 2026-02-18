@@ -2,9 +2,9 @@
 <browserconfig>
   <msapplication>
     <tile>
-      <square70x70logo src="/toolary.github.io/assets/images/favicon-48x48.png"/>
-      <square150x150logo src="/toolary.github.io/assets/images/favicon-192x192.png"/>
-      <square310x310logo src="/toolary.github.io/assets/images/favicon-512x512.png"/>
+      <square70x70logo src="/assets/images/favicon-48x48.png"/>
+      <square150x150logo src="/assets/images/favicon-192x192.png"/>
+      <square310x310logo src="/assets/images/favicon-512x512.png"/>
       <TileColor>#00BFFF</TileColor>
     </tile>
   </msapplication>

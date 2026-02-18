@@ -1,227 +1,99 @@
 ---
 layout: default
-title: "Text Picker Chrome Extension - Extract and copy text content | Toolary"
-description: "Download the best Text Picker Chrome extension. Extract and copy text content. Free Text Picker tool for better productivity and assistance."
-keywords: "color picker chrome extension, color picker tool, hex color picker, RGB color picker, HSL color picker, eyedropper tool, color extractor, web color picker, design tools, color codes, color palette, color scheme, web development tools, chrome extension, toolary, adem isler"
+title: "Text Picker Tool for Chrome | Toolboard"
+description: "Text Picker: Select and copy text content Learn use cases, workflow steps, related tools, and implementation details in Toolboard."
+keywords: "copy, extract, text, content, capture, Text Picker"
+og_type: "article"
 permalink: /tools/text-picker/
-canonical: "https://toolary.ademisler.com/tools/text-picker/"
-og_title: "Text Picker Chrome Extension - Extract and copy text content"
-og_description: "Download the best Text Picker Chrome extension. Extract and copy text content. Free Text Picker tool for better productivity and assistance."
-og_image: "/assets/images/toolary-color-picker-og.png"
-twitter_title: "Text Picker Chrome Extension - Extract and copy text content"
-twitter_description: "Download the best Text Picker Chrome extension. Extract and copy text content. Free Text Picker tool for better productivity and assistance."
-twitter_image: "/assets/images/toolary-color-picker-og.png"
+canonical: "https://toolboard.ademisler.com/tools/text-picker/"
 ---
-<!-- Structured Data -->
+
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "text picker - Toolary Chrome Extension",
-  "description": "Download the best text picker Chrome extension. Free text picker tool for better productivity and assistance.",
-  "url": "https://toolary.ademisler.com/tools/text-picker/",
-  "applicationCategory": "BrowserApplication",
-  "operatingSystem": "Chrome",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Adem İşler",
-    "url": "https://ademisler.com"
-  },
-  "screenshot": "https://toolary.ademisler.com/assets/images/toolary-text-picker-og.png",
-  "softwareVersion": "2.0.0",
-  "datePublished": "2024-01-01",
-  "dateModified": "2024-12-27",
-  "keywords": "text extractor, text picker, chrome extension, productivity"
-}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Text Picker - Toolboard","applicationCategory":"BrowserApplication","operatingSystem":"Chrome","description":"Select and copy text content","url":"https://toolboard.ademisler.com/tools/text-picker/","softwareVersion":"2.x","applicationSubCategory":"Capture","downloadUrl":"https://chromewebstore.google.com/detail/efecahgaobadfmaecclkfnfdfmincbmm","isAccessibleForFree":true,"inLanguage":"en-US","publisher":{"@type":"Organization","name":"Toolboard","url":"https://toolboard.ademisler.com"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["text","content","copy","extract","text"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Text Picker do in Toolboard?","acceptedAnswer":{"@type":"Answer","text":"Text Picker is designed to collect assets and page content quickly. Select and copy text content. It belongs to the Capture category in Toolboard."}},{"@type":"Question","name":"When should I use Text Picker instead of another tool?","acceptedAnswer":{"@type":"Answer","text":"Use Text Picker when your primary task is copy. For broader workflows, combine it with related Toolboard tools listed on this page."}},{"@type":"Question","name":"Does Text Picker store my data?","acceptedAnswer":{"@type":"Answer","text":"Text Picker follows Toolboard's local-first behavior. Permissions used by Text Picker: activeTab. These permissions are scoped to tool execution and follow Toolboard's privacy-first model."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://toolboard.ademisler.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://toolboard.ademisler.com/#tools"},{"@type":"ListItem","position":3,"name":"Capture","item":"https://toolboard.ademisler.com/categories/capture/"},{"@type":"ListItem","position":4,"name":"Text Picker","item":"https://toolboard.ademisler.com/tools/text-picker/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Text Picker | Toolboard","description":"Select and copy text content","url":"https://toolboard.ademisler.com/tools/text-picker/","inLanguage":"en-US","isPartOf":{"@type":"WebSite","name":"Toolboard","url":"https://toolboard.ademisler.com"},"primaryImageOfPage":"https://toolboard.ademisler.com/assets/images/favicon-512x512.png"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"How to use Text Picker in Toolboard","description":"Step-by-step workflow for Text Picker.","totalTime":"PT2M","step":[{"@type":"HowToStep","position":1,"name":"Step 1","text":"Open Toolboard from your Chrome toolbar and choose Text Picker."},{"@type":"HowToStep","position":2,"name":"Step 2","text":"Prepare your source input and use Text Picker to capture content from the current page."},{"@type":"HowToStep","position":3,"name":"Step 3","text":"Validate the result, then continue with related Toolboard tools if your workflow needs additional steps."}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"Related tools for Text Picker","numberOfItems":4,"itemListElement":[{"@type":"ListItem","position":1,"name":"Media Download","url":"https://toolboard.ademisler.com/tools/media-picker/"},{"@type":"ListItem","position":2,"name":"PDF Generator","url":"https://toolboard.ademisler.com/tools/pdf-generator/"},{"@type":"ListItem","position":3,"name":"QR Code Generator","url":"https://toolboard.ademisler.com/tools/qr-code-generator/"},{"@type":"ListItem","position":4,"name":"Screenshot Picker","url":"https://toolboard.ademisler.com/tools/screenshot-picker/"}]}
 </script>
 
-<!-- Breadcrumb Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://toolary.ademisler.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Tools",
-      "item": "https://toolary.ademisler.com/#tools"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "text picker",
-      "item": "https://toolary.ademisler.com/tools/text-picker/"
-    }
-  ]
-}
-</script>
-<!-- Breadcrumb Navigation -->
-<nav class="breadcrumb" style="padding: 20px 0; border-bottom: 1px solid var(--toolary-border);">
+<section class="tool-detail" data-tool-id="text-picker">
   <div class="container">
-    <a href="/" style="color: var(--toolary-text-secondary); text-decoration: none;">Home</a>
-    <span style="margin: 0 8px; color: var(--toolary-text-secondary);">›</span>
-    <a href="/#tools" style="color: var(--toolary-text-secondary); text-decoration: none;">Tools</a>
-    <span style="margin: 0 8px; color: var(--toolary-text-secondary);">›</span>
-    <span style="color: var(--toolary-accent);">Text Picker</span>
-  </div>
-</nav>
+    <nav class="breadcrumb">
+      <a href="/">Home</a>
+      <span>›</span>
+      <a href="/#tools">Tools</a>
+      <span>›</span>
+      <a href="/categories/capture/">Capture</a>
+      <span>›</span>
+      <span class="is-current">Text Picker</span>
+    </nav>
 
-<!-- Tool Header Section -->
-<section class="tool-header" style="padding: 60px 0; background: linear-gradient(135deg, var(--toolary-bg) 0%, var(--toolary-button-bg) 100%);">
-  <div class="container">
-    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: center;">
-      <!-- Tool Icon and Basic Info -->
-      <div style="text-align: center;">
-        <div style="width: 120px; height: 120px; background: var(--toolary-button-bg); border: 2px solid var(--toolary-border); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: var(--toolary-shadow-hover);">
-          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--toolary-accent);">
-            <path d="M12 4v16M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2M9 20h6"/>
-            <path d="M12 4v16M4 7V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2M9 20h6"/>
-            <circle cx="12" cy="12" r="3"/>
-          </svg>
-        </div>
-        <h1 style="font-size: 2.5rem; margin-bottom: 10px; color: var(--toolary-text);">Text Picker</h1>
-        <p style="font-size: 1.2rem; color: var(--toolary-text-secondary); margin-bottom: 20px;">Extract and copy text content</p>
-        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-          <a href="https://chromewebstore.google.com/detail/efecahgaobadfmaecclkfnfdfmincbmm" class="btn btn-primary" style="padding: 12px 24px; font-size: 1.1rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </svg>
-            Download for Chrome
-          </a>
-        </div>
-      </div>
-      
-      <!-- Tool Description -->
+    <div class="tool-detail__header">
+      <div id="tool-detail-icon" class="tool-card__icon" aria-hidden="true"></div>
       <div>
-        <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--toolary-text);">Professional Text Picker Tool</h2>
-        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--toolary-text-secondary); margin-bottom: 25px;">
-          The Text Picker tool allows you to extract precise color codes from any element on any website. 
-          Simply click on any color and get instant hex, RGB, and HSL values. Perfect for designers, 
-          developers, and anyone who needs accurate color information.
-        </p>
-        
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 30px;">
-          <div style="background: var(--toolary-button-bg); padding: 20px; border-radius: 12px; border: 1px solid var(--toolary-border);">
-            <h3 style="font-size: 1.1rem; margin-bottom: 10px; color: var(--toolary-text);">Easy to Use</h3>
-            <p style="color: var(--toolary-text-secondary); font-size: 0.95rem;">One-click color extraction from any webpage element</p>
-          </div>
-          <div style="background: var(--toolary-button-bg); padding: 20px; border-radius: 12px; border: 1px solid var(--toolary-border);">
-            <h3 style="font-size: 1.1rem; margin-bottom: 10px; color: var(--toolary-text);">Multiple Formats</h3>
-            <p style="color: var(--toolary-text-secondary); font-size: 0.95rem;">Get hex, RGB, HSL color codes instantly</p>
-          </div>
-        </div>
+        <h1 id="tool-detail-title">Text Picker</h1>
+        <p id="tool-detail-description">Select and copy text content</p>
+        <span id="tool-detail-category" class="tool-card__category">Capture</span>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Features Section -->
-<section class="tool-features" style="padding: 80px 0; background: var(--toolary-bg);">
-  <div class="container">
-    <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 50px; color: var(--toolary-text);">Key Features</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-      <div style="background: var(--toolary-button-bg); padding: 30px; border-radius: 16px; border: 1px solid var(--toolary-border); box-shadow: var(--toolary-shadow);">
-        <div style="width: 60px; height: 60px; background: var(--toolary-accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: white;">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M12 1v6m0 6v6"/>
-            <path d="m21 12-6 0m-6 0-6 0"/>
-          </svg>
-        </div>
-        <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--toolary-text);">Precision Color Detection</h3>
-        <p style="color: var(--toolary-text-secondary); line-height: 1.6;">Click on any element to instantly extract its exact color values with pixel-perfect accuracy.</p>
-      </div>
-      
-      <div style="background: var(--toolary-button-bg); padding: 30px; border-radius: 16px; border: 1px solid var(--toolary-border); box-shadow: var(--toolary-shadow);">
-        <div style="width: 60px; height: 60px; background: var(--toolary-accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: white;">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
-        <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--toolary-text);">Multiple Color Formats</h3>
-        <p style="color: var(--toolary-text-secondary); line-height: 1.6;">Get colors in hex (#FF0000), RGB (255,0,0), and HSL (0,100%,50%) formats for maximum compatibility.</p>
-      </div>
-      
-      <div style="background: var(--toolary-button-bg); padding: 30px; border-radius: 16px; border: 1px solid var(--toolary-border); box-shadow: var(--toolary-shadow);">
-        <div style="width: 60px; height: 60px; background: var(--toolary-accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: white;">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-            <path d="M9 9h6v6H9z"/>
-          </svg>
-        </div>
-        <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--toolary-text);">Copy to Clipboard</h3>
-        <p style="color: var(--toolary-text-secondary); line-height: 1.6;">Instantly copy color codes to your clipboard with a single click for easy use in your projects.</p>
-      </div>
-      
-      <div style="background: var(--toolary-button-bg); padding: 30px; border-radius: 16px; border: 1px solid var(--toolary-border); box-shadow: var(--toolary-shadow);">
-        <div style="width: 60px; height: 60px; background: var(--toolary-accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: white;">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-        </div>
-        <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--toolary-text);">Works Everywhere</h3>
-        <p style="color: var(--toolary-text-secondary); line-height: 1.6;">Extract colors from any website, including complex layouts, images, and dynamic content.</p>
-      </div>
+    <section class="tool-detail__card tool-detail__lead">
+      <h2>Text Picker Overview</h2>
+      <p>Text Picker brings capture capability into a single focused action flow.</p>
+      <p>Select and copy text content. It works best when you want captured media, files, or reusable extracts.</p>
+      <p>Typical input includes visible content or document sections from the active tab, while the output is optimized for teams handling copy, extract, and text.</p>
+    </section>
+
+    <div class="tool-detail__grid">
+      <article class="tool-detail__card">
+        <h2>Primary Use Cases</h2>
+        <ul><li>Use Text Picker to speed up copy checks without switching tabs or external apps.</li><li>Apply Text Picker in QA and support workflows when consistent extract output is required.</li><li>Choose Text Picker for repeatable operations where text accuracy matters before handoff.</li><li>Text Picker is a strong fit when your team needs to collect assets and page content quickly.</li></ul>
+      </article>
+      <article class="tool-detail__card">
+        <h2>How to Use Text Picker</h2>
+        <ol><li>Open Toolboard from your Chrome toolbar and choose Text Picker.</li><li>Prepare your source input and use Text Picker to capture content from the current page.</li><li>Validate the result, then continue with related Toolboard tools if your workflow needs additional steps.</li></ol>
+      </article>
+      <article class="tool-detail__card">
+        <h2>Input and Output Profile</h2>
+        <ul>
+          <li><strong>Category:</strong> Capture</li>
+          <li><strong>Tags:</strong> text, content</li>
+          <li><strong>Keywords:</strong> copy, extract, text</li>
+          <li><strong>Module:</strong> <code>capture/textPicker.js</code></li>
+        </ul>
+      </article>
+      <article class="tool-detail__card">
+        <h2>Permissions and Privacy</h2>
+        <p>Permissions used by Text Picker: activeTab. These permissions are scoped to tool execution and follow Toolboard&#39;s privacy-first model.</p>
+      </article>
     </div>
-  </div>
-</section>
 
-<!-- How to Use Section -->
-<section class="how-to-use" style="padding: 80px 0; background: var(--toolary-button-bg);">
-  <div class="container">
-    <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 50px; color: var(--toolary-text);">How to Use</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
-      <div style="text-align: center;">
-        <div style="width: 80px; height: 80px; background: var(--toolary-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: white; font-weight: bold;">1</div>
-        <h3 style="font-size: 1.2rem; margin-bottom: 15px; color: var(--toolary-text);">Install Extension</h3>
-        <p style="color: var(--toolary-text-secondary);">Download and install the Toolary Chrome extension from the Chrome Web Store.</p>
+    <section class="tool-detail__card" style="margin-top: 12px;">
+      <h2>Related Tools in Capture</h2>
+      <ul><li><a href="/tools/media-picker/">Media Download</a> - Download images and media files</li><li><a href="/tools/pdf-generator/">PDF Generator</a> - Convert current page to PDF and download</li><li><a href="/tools/qr-code-generator/">QR Code Generator</a> - Generate customizable QR codes for current page</li><li><a href="/tools/screenshot-picker/">Screenshot Picker</a> - Capture full page screenshots</li></ul>
+    </section>
+
+    <section class="tool-detail__card" style="margin-top: 12px;">
+      <h2>FAQ</h2>
+      <div class="tool-faq">
+        <h3>What does Text Picker do in Toolboard?</h3><p>Text Picker is designed to collect assets and page content quickly. Select and copy text content. It belongs to the Capture category in Toolboard.</p><h3>When should I use Text Picker instead of another tool?</h3><p>Use Text Picker when your primary task is copy. For broader workflows, combine it with related Toolboard tools listed on this page.</p><h3>Does Text Picker store my data?</h3><p>Text Picker follows Toolboard&#39;s local-first behavior. Permissions used by Text Picker: activeTab. These permissions are scoped to tool execution and follow Toolboard&#39;s privacy-first model.</p>
       </div>
-      
-      <div style="text-align: center;">
-        <div style="width: 80px; height: 80px; background: var(--toolary-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: white; font-weight: bold;">2</div>
-        <h3 style="font-size: 1.2rem; margin-bottom: 15px; color: var(--toolary-text);">Open Text Picker</h3>
-        <p style="color: var(--toolary-text-secondary);">Click on the Toolary icon and select the Text Picker tool from the available options.</p>
-      </div>
-      
-      <div style="text-align: center;">
-        <div style="width: 80px; height: 80px; background: var(--toolary-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: white; font-weight: bold;">3</div>
-        <h3 style="font-size: 1.2rem; margin-bottom: 15px; color: var(--toolary-text);">Click to Extract</h3>
-        <p style="color: var(--toolary-text-secondary);">Click on any element on the webpage to instantly extract its color values.</p>
-      </div>
-      
-      <div style="text-align: center;">
-        <div style="width: 80px; height: 80px; background: var(--toolary-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: white; font-weight: bold;">4</div>
-        <h3 style="font-size: 1.2rem; margin-bottom: 15px; color: var(--toolary-text);">Copy & Use</h3>
-        <p style="color: var(--toolary-text-secondary);">Copy the color codes and use them in your design tools or code.</p>
-      </div>
+    </section>
+
+    <div style="margin: 28px 0 48px; display:flex; gap:12px; flex-wrap:wrap;">
+      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/efecahgaobadfmaecclkfnfdfmincbmm" target="_blank" rel="noopener">Install Toolboard</a>
+      <a class="btn btn-secondary" href="/">Back to all tools</a>
     </div>
-  </div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta-section" style="padding: 80px 0; background: linear-gradient(135deg, var(--toolary-accent) 0%, #0099cc 100%); text-align: center;">
-  <div class="container">
-    <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: white;">Ready to Extract Colors?</h2>
-    <p style="font-size: 1.2rem; margin-bottom: 40px; color: rgba(255,255,255,0.9);">Download Toolary and start extracting colors from any website today!</p>
-    <a href="https://chromewebstore.google.com/detail/efecahgaobadfmaecclkfnfdfmincbmm" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.2rem; text-decoration: none; display: inline-flex; align-items: center; gap: 12px; background: white; color: var(--toolary-accent); border-radius: 12px; font-weight: 600; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-      </svg>
-      Download for Chrome
-    </a>
   </div>
 </section>

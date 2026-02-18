@@ -2,304 +2,74 @@
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#00BFFF">
-  
-  <!-- Enhanced SEO Meta Tags -->
-  <meta name="keywords" content="Chrome extension, productivity tools, web tools, browser extension, AI tools, color picker, screenshot, PDF generator, QR code, text extractor, bookmark manager, dark mode, reading mode, sticky notes, text highlighter, site analyzer, copy history, text summarizer, translator, content detector, email generator, SEO analyzer, AI chat, web development, design tools, automation, free tools, web productivity, browser tools, developer tools, design tools, AI powered tools, modern web tools, glassmorphism, toolary, adem isler">
-  <meta name="author" content="Adem İşler">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="{{ page.title | default: 'Toolary - 24 Productivity Tools for Modern Web' }}">
-  <meta property="og:description" content="{{ page.description | default: 'A comprehensive Chrome extension with 24 web productivity tools including AI-powered features, smart favorites, and modern design. Free download for Chrome browser.' }}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/toolary-og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Toolary - 24 Productivity Tools for Modern Web">
-  <meta property="og:site_name" content="Toolary">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="site-baseurl" content="{{ site.baseurl }}">
+  <link rel="canonical" href="{{ page.canonical | default: site.url | append: page.url }}">
+  <meta property="og:site_name" content="Toolboard">
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:url" content="{{ page.canonical | default: site.url | append: page.url }}">
+  <meta property="og:image" content="{{ '/assets/images/favicon-512x512.png' | absolute_url }}">
+  <meta property="og:image:alt" content="Toolboard Chrome Extension">
   <meta property="og:locale" content="en_US">
-  
-  <!-- Twitter Card Meta Tags -->
+  <meta property="article:modified_time" content="{{ page.date | default: site.time | date_to_xmlschema }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title | default: 'Toolary - 24 Productivity Tools for Modern Web' }}">
-  <meta name="twitter:description" content="{{ page.description | default: 'A comprehensive Chrome extension with 24 web productivity tools including AI-powered features, smart favorites, and modern design. Free download for Chrome browser.' }}">
-  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/toolary-og-image.png">
-  <meta name="twitter:image:alt" content="Toolary - 24 Productivity Tools for Modern Web">
-  <meta name="twitter:site" content="@idemasler">
-  <meta name="twitter:creator" content="@idemasler">
-  
-  <!-- Additional SEO Meta Tags -->
-  <meta name="application-name" content="Toolary">
-  <meta name="apple-mobile-web-app-title" content="Toolary">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="mobile-web-app-capable" content="yes">
-  
-  <!-- Page Speed and Performance -->
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="color-scheme" content="light dark">
-  <meta name="supported-color-schemes" content="light dark">
-  
-  <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'self' https://www.google.com;">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-  
-  <!-- Alternate Language Versions (if available) -->
-  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-  
-  {%- seo -%}
-  
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+  <meta name="twitter:image" content="{{ '/assets/images/favicon-512x512.png' | absolute_url }}">
+  <meta name="twitter:image:alt" content="Toolboard Chrome Extension">
+  <link rel="dns-prefetch" href="//chromewebstore.google.com">
+  <link rel="dns-prefetch" href="//github.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/images/favicon-48x48.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="128x128" href="{{ '/assets/images/favicon-128x128.png' | relative_url }}">
+  <link rel="shortcut icon" href="{{ '/assets/images/favicon-48x48.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/images/favicon-192x192.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="512x512" href="{{ '/assets/images/favicon-512x512.png' | relative_url }}">
   <link rel="manifest" href="{{ '/assets/images/site.webmanifest' | relative_url }}">
-  
-  <!-- Microsoft Tiles -->
-  <meta name="msapplication-TileColor" content="#00BFFF">
-  <meta name="msapplication-TileImage" content="{{ '/assets/images/favicon-192x192.png' | relative_url }}">
   <meta name="msapplication-config" content="{{ '/assets/images/browserconfig.xml' | relative_url }}">
-  
-  <!-- Preload critical resources -->
-  <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
-  
-  <!-- Preconnect to external domains -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://buymeacoffee.com">
-  <link rel="preconnect" href="https://github.com">
-  <link rel="preconnect" href="https://chrome.google.com">
-  <link rel="preload" href="{{ '/assets/js/animations.js' | relative_url }}" as="script">
-  
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Toolary",
-    "description": "A comprehensive Chrome extension with 24 web productivity tools including AI-powered features, smart favorites, and modern design",
-    "url": "{{ site.url }}{{ site.baseurl }}",
-    "applicationCategory": "BrowserApplication",
-    "operatingSystem": "Chrome",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Adem İşler",
-      "url": "https://ademisler.com/en",
-      "sameAs": [
-        "https://github.com/ademisler",
-        "https://twitter.com/idemasler"
-      ]
-    },
-    "publisher": {
-      "@type": "Person",
-      "name": "Adem İşler",
-      "url": "https://ademisler.com/en"
-    },
-    "datePublished": "2024-01-01",
-    "dateModified": "2024-12-27",
-    "version": "2.0.0",
-    "screenshot": "{{ site.url }}{{ site.baseurl }}/assets/images/toolary-screenshot.png",
-    "featureList": [
-      "Color Picker",
-      "Element Picker", 
-      "Font Picker",
-      "Link Picker",
-      "Screenshot Picker",
-      "Media Picker",
-      "Text Picker",
-      "PDF Generator",
-      "QR Code Generator",
-      "Video Recorder",
-      "Sticky Notes",
-      "Text Highlighter",
-      "Reading Mode",
-      "Bookmark Manager",
-      "Dark Mode Toggle",
-      "Site Info Picker",
-      "Color Palette Generator",
-      "Copy History Manager",
-      "Text Summarizer",
-      "Text Translator",
-      "Content Detector",
-      "Email Generator",
-      "SEO Analyzer",
-      "AI Chat"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "150"
-    },
-    "keywords": "Chrome extension, productivity tools, web tools, browser extension, AI tools, color picker, screenshot, PDF generator, QR code, text extractor, bookmark manager, dark mode, reading mode, sticky notes, text highlighter, site analyzer, copy history, text summarizer, translator, content detector, email generator, SEO analyzer, AI chat, web development, design tools, automation, free tools, web productivity, browser tools, developer tools, design tools, AI powered tools, modern web tools, glassmorphism, toolary, adem isler"
-  }
-  </script>
-  
-  <!-- Additional Structured Data for Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Toolary",
-    "url": "{{ site.url }}{{ site.baseurl }}",
-    "logo": "{{ site.url }}{{ site.baseurl }}/assets/images/toolary-logo.png",
-    "description": "A comprehensive Chrome extension with 24 web productivity tools including AI-powered features, smart favorites, and modern design",
-    "founder": {
-      "@type": "Person",
-      "name": "Adem İşler",
-      "url": "https://ademisler.com/en"
-    },
-    "sameAs": [
-      "https://github.com/ademisler/toolary",
-      "https://chrome.google.com/webstore"
-    ]
-  }
-  </script>
-  
-  <!-- Breadcrumb Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "{{ site.url }}{{ site.baseurl }}"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Tools",
-        "item": "{{ site.url }}{{ site.baseurl }}#tools"
-      }
-    ]
-  }
-  </script>
-  
+  {%- seo -%}
   {%- feed_meta -%}
-  
-  <!-- Google Analytics (Replace with your GA4 ID) -->
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}', {
-        page_title: '{{ page.title | default: site.title }}',
-        page_location: '{{ site.url }}{{ site.baseurl }}{{ page.url }}'
-      });
-    </script>
-  {%- endif -%}
-  
-  <!-- Google Search Console Verification (Replace with your verification code) -->
-  {%- if site.google_site_verification -%}
-    <meta name="google-site-verification" content="{{ site.google_site_verification }}">
-  {%- endif -%}
-  
-  <!-- Bing Webmaster Tools Verification (Optional) -->
-  {%- if site.bing_site_verification -%}
-    <meta name="msvalidate.01" content="{{ site.bing_site_verification }}">
-  {%- endif -%}
-  
-  <!-- Yandex Webmaster Verification (Optional) -->
-  {%- if site.yandex_site_verification -%}
-    <meta name="yandex-verification" content="{{ site.yandex_site_verification }}">
-  {%- endif -%}
 </head>
-
 <body class="dark">
-  <!-- Skip to main content for accessibility -->
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
-  
-  <!-- Theme toggle button -->
   <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-    <svg class="theme-icon theme-icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <circle cx="12" cy="12" r="5"/>
-      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-    </svg>
-    <svg class="theme-icon theme-icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-    </svg>
+    <svg class="theme-icon theme-icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <svg class="theme-icon theme-icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
   </button>
 
   <main id="main-content" class="main-content">
     {{ content }}
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>Toolary</h3>
-        <p>24 productivity tools for modern web browsing</p>
-        <div class="social-links">
-          <a href="https://github.com/ademisler" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-            </svg>
-          </a>
-          <a href="https://ademisler.com/en" target="_blank" rel="noopener" aria-label="Website">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-            </svg>
-          </a>
-          <a href="https://buymeacoffee.com/ademisler" target="_blank" rel="noopener" aria-label="Buy me a coffee">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            </svg>
-          </a>
-        </div>
+        <h3>Toolboard</h3>
+        <p>82 productivity tools for modern browsing workflows.</p>
       </div>
-      
       <div class="footer-section">
-        <h4>Developer</h4>
-        <p>Created by <strong>Adem İşler</strong></p>
-        <p>Full-stack developer passionate about productivity tools and modern web technologies.</p>
+        <h4>Links</h4>
+        <p><a href="https://chromewebstore.google.com/detail/efecahgaobadfmaecclkfnfdfmincbmm" target="_blank" rel="noopener">Chrome Web Store</a></p>
+        <p><a href="https://github.com/ademisler/toolboard" target="_blank" rel="noopener">GitHub</a></p>
+        <p><a href="/PRIVACY_POLICY.md">Privacy Policy</a></p>
       </div>
     </div>
-    
     <div class="footer-bottom">
-      <p>&copy; 2024 Adem İşler. All rights reserved.</p>
+      <p>&copy; {{ 'now' | date: '%Y' }} Adem Isler.</p>
     </div>
   </footer>
 
-
-  <!-- Scripts -->
   <script src="{{ '/assets/js/animations.js' | relative_url }}" defer></script>
-  
-  <!-- Smooth scroll polyfill for older browsers -->
-  <script>
-    if (!('scrollBehavior' in document.documentElement.style)) {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/gh/iamdustan/smoothscroll@master/dist/smoothscroll.min.js';
-      document.head.appendChild(script);
-    }
-  </script>
 </body>
 </html>
