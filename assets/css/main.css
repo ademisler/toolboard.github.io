@@ -65,12 +65,18 @@ body {
   overflow-x: hidden;
 }
 
-main a {
-  color: var(--toolary-link);
+a,
+a:visited {
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-main a:hover {
-  color: var(--toolary-link-hover);
+a:hover,
+a:focus,
+a:active {
+  color: #fff !important;
 }
 
 .skip-to-main {
