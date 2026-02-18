@@ -18,12 +18,10 @@ plugins:
 
 author: "Adem Isler"
 twitter_username: "idemasler"
-github_username: "ademisler"
 
 social:
   name: "Toolboard"
   links:
-    - "https://github.com/ademisler"
     - "https://ademisler.com/en"
     - "https://buymeacoffee.com/ademisler"
 

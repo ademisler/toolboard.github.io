@@ -7,6 +7,8 @@
   --toolary-border: #dbe4f0;
   --toolary-text: #10243f;
   --toolary-text-secondary: #4a607d;
+  --toolary-link: #0369a1;
+  --toolary-link-hover: #075985;
   --toolary-shadow: 0 10px 30px rgba(9, 24, 52, 0.08);
   --toolary-shadow-hover: 0 18px 42px rgba(9, 24, 52, 0.14);
   --toolary-radius: 14px;
@@ -22,6 +24,8 @@ body.light {
   --toolary-border: #dbe4f0;
   --toolary-text: #10243f;
   --toolary-text-secondary: #4a607d;
+  --toolary-link: #0369a1;
+  --toolary-link-hover: #075985;
 }
 
 body.dark {
@@ -31,6 +35,8 @@ body.dark {
   --toolary-border: #2a3a53;
   --toolary-text: #f4f8ff;
   --toolary-text-secondary: #a8bdd6;
+  --toolary-link: #f4c76b;
+  --toolary-link-hover: #ffe3a3;
   --toolary-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   --toolary-shadow-hover: 0 20px 44px rgba(0, 0, 0, 0.45);
 }
@@ -57,6 +63,14 @@ body {
     var(--toolary-bg);
   line-height: 1.55;
   overflow-x: hidden;
+}
+
+main a {
+  color: var(--toolary-link);
+}
+
+main a:hover {
+  color: var(--toolary-link-hover);
 }
 
 .skip-to-main {
@@ -575,9 +589,8 @@ body.dark .theme-toggle .theme-icon--moon {
 
 .crawl-links__grid {
   margin-top: 14px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  columns: 3 280px;
+  column-gap: 10px;
 }
 
 .crawl-links__group {
@@ -585,6 +598,8 @@ body.dark .theme-toggle .theme-icon--moon {
   border-radius: 12px;
   background: var(--toolary-surface-soft);
   padding: 12px;
+  break-inside: avoid;
+  margin-bottom: 10px;
 }
 
 .crawl-links__group h3 {
@@ -600,11 +615,12 @@ body.dark .theme-toggle .theme-icon--moon {
 }
 
 .crawl-links__group a {
-  color: var(--toolary-accent);
+  color: var(--toolary-link);
   text-decoration: none;
 }
 
 .crawl-links__group a:hover {
+  color: var(--toolary-link-hover);
   text-decoration: underline;
 }
 
@@ -780,8 +796,12 @@ body.dark .theme-toggle .theme-icon--moon {
 }
 
 .footer-section a {
-  color: var(--toolary-accent);
+  color: var(--toolary-link);
   text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: var(--toolary-link-hover);
 }
 
 .footer-bottom {
@@ -828,6 +848,10 @@ body.dark .theme-toggle .theme-icon--moon {
   .footer-content,
   .crawl-links__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .crawl-links__grid {
+    columns: 2 240px;
   }
 
   .theme-toggle {
@@ -879,6 +903,10 @@ body.dark .theme-toggle .theme-icon--moon {
   .footer-content,
   .crawl-links__grid {
     grid-template-columns: 1fr;
+  }
+
+  .crawl-links__grid {
+    columns: 1;
   }
 
   .tool-detail__header {

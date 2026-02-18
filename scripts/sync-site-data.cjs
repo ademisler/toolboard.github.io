@@ -294,7 +294,7 @@ function jsonLdForTool(tool, faqItems) {
     operatingSystem: 'Chrome',
     description: tool.description,
     url: `${SITE_URL}/tools/${tool.id}/`,
-    softwareVersion: '2.x',
+    softwareVersion: '3.0.0',
     applicationSubCategory: tool.categoryLabel,
     downloadUrl: CWS_URL,
     isAccessibleForFree: true,
@@ -614,7 +614,7 @@ function buildHomeJsonLd(data) {
     name: 'Toolboard',
     applicationCategory: 'BrowserApplication',
     operatingSystem: 'Chrome',
-    softwareVersion: '2.x',
+    softwareVersion: '3.0.0',
     url: SITE_URL,
     offers: {
       '@type': 'Offer',
@@ -631,7 +631,8 @@ function buildHomeJsonLd(data) {
     url: SITE_URL,
     logo: `${SITE_URL}/assets/images/favicon-512x512.png`,
     sameAs: [
-      'https://github.com/ademisler/toolboard'
+      'https://ademisler.com/en',
+      'https://buymeacoffee.com/ademisler'
     ]
   };
 

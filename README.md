@@ -1,4 +1,4 @@
-# Toolboard GitHub Pages
+# Toolboard Website
 
 Marketing/docs site for the **Toolboard** Chrome extension.
 

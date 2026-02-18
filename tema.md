@@ -1,6 +1,6 @@
 # Toolboard Site Notes
 
-This document describes the current GitHub Pages setup for the Toolboard marketing site.
+This document describes the current Toolboard Pages setup for the Toolboard marketing site.
 
 ## Purpose
 - Keep the public website aligned with the extension source of truth.
@@ -39,4 +39,4 @@ Generated files:
 1. Update extension manifest/tool metadata.
 2. Run sync script.
 3. Commit generated files.
-4. Deploy on GitHub Pages.
+4. Deploy the site.
