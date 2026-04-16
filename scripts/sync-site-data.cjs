@@ -298,7 +298,7 @@ function jsonLdForTool(tool, faqItems) {
     operatingSystem: 'Chrome',
     description: tool.description,
     url: `${SITE_URL}/tools/${tool.id}/`,
-    softwareVersion: '3.0.0',
+    softwareVersion: '3.0.1',
     applicationSubCategory: tool.categoryLabel,
     downloadUrl: CWS_URL,
     isAccessibleForFree: true,
@@ -618,7 +618,7 @@ function buildHomeJsonLd(data) {
     name: 'Toolboard',
     applicationCategory: 'BrowserApplication',
     operatingSystem: 'Chrome',
-    softwareVersion: '3.0.0',
+    softwareVersion: '3.0.1',
     url: SITE_URL,
     offers: {
       '@type': 'Offer',

@@ -1,6 +1,6 @@
 # Toolboard Privacy Policy
 
-_Effective date: February 18, 2026 (Toolboard V3.0.0)_
+_Effective date: April 17, 2026 (Toolboard V3.0.1)_
 
 Toolboard is a Chrome extension focused on local-first processing. Most tool operations run inside your browser and do not send page content to our servers.
 
