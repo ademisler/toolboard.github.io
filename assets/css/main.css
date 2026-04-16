@@ -516,8 +516,8 @@ body.dark .theme-toggle .theme-icon--moon {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #111827;
-  background: color-mix(in srgb, var(--toolary-primary) 88%, #ffffff 12%);
+  color: #ffffff;
+  background: color-mix(in srgb, var(--toolary-primary) 94%, #000000 6%);
   border: 1px solid color-mix(in srgb, var(--toolary-primary) 64%, var(--toolary-border));
 }
 
