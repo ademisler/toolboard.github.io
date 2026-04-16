@@ -1,7 +1,7 @@
 {
-  "name": "Toolboard - 82 Web Productivity Tools for Chrome",
+  "name": "Toolboard - Web Productivity Tools for Chrome",
   "short_name": "Toolboard",
-  "description": "Toolboard is a Chrome extension with 82 tools across inspect, capture, enhance, utilities, converters, previewers, and AI.",
+  "description": "Toolboard is a Chrome extension with inspect, capture, enhance, utilities, converters, previewers, and AI tools.",
   "icons": [
     { "src": "/assets/images/favicon-16x16.png", "sizes": "16x16", "type": "image/png" },
     { "src": "/assets/images/favicon-32x32.png", "sizes": "32x32", "type": "image/png" },

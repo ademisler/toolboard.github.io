@@ -4,7 +4,7 @@ Marketing/docs site for the **Toolboard** Chrome extension.
 
 ## Current scope
 - Reflects the live extension catalog from `../extension/config/tools-manifest.json`
-- Shows all current categories and tools (82 tools)
+- Shows all current categories and tools from the extension manifest
 - Generates one SEO page per tool under `/tools/<tool-id>/`
 - Provides searchable/filterable homepage grid
 

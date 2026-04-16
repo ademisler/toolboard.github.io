@@ -9,6 +9,18 @@ const state = {
 };
 let searchDebounceTimer = null;
 
+function compareTools(a, b) {
+  const isNewDelta = Number(Boolean(b?.isNew)) - Number(Boolean(a?.isNew));
+  if (isNewDelta !== 0) return isNewDelta;
+
+  const orderA = typeof a?.order === 'number' ? a.order : Number.MAX_SAFE_INTEGER;
+  const orderB = typeof b?.order === 'number' ? b.order : Number.MAX_SAFE_INTEGER;
+  const orderDelta = orderA - orderB;
+  if (orderDelta !== 0) return orderDelta;
+
+  return String(a?.name || '').localeCompare(String(b?.name || ''));
+}
+
 function withBase(pathname) {
   const base = document.querySelector('meta[name="site-baseurl"]')?.getAttribute('content') || '';
   return `${base}${pathname}`;
@@ -49,6 +61,7 @@ async function loadToolsData() {
   const data = await res.json();
   state.tools = Array.isArray(data.tools) ? data.tools : [];
   state.categories = Array.isArray(data.categories) ? data.categories : [];
+  state.tools.sort(compareTools);
   state.filtered = [...state.tools];
 }
 
@@ -69,6 +82,7 @@ function applyFilters() {
 
     return haystack.includes(query);
   });
+  state.filtered.sort(compareTools);
   state.currentPage = 1;
 }
 
@@ -245,7 +259,10 @@ function renderTools() {
     content.innerHTML = `
       <h3 class="tool-card__title">${escapeHtml(tool.name)}</h3>
       <p class="tool-card__description">${escapeHtml(tool.description || '')}</p>
-      <span class="tool-card__category">${escapeHtml(tool.categoryLabel || tool.category)}</span>
+      <div class="tool-card__meta">
+        <span class="tool-card__category">${escapeHtml(tool.categoryLabel || tool.category)}</span>
+        ${tool.isNew ? '<span class="tool-card__new-badge">NEW</span>' : ''}
+      </div>
     `;
 
     const openBtn = document.createElement('a');

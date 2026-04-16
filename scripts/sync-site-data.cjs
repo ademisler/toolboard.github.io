@@ -18,6 +18,9 @@ const robotsPath = path.join(siteRoot, 'robots.txt');
 
 const SITE_URL = 'https://toolboard.ademisler.com';
 const CWS_URL = 'https://chromewebstore.google.com/detail/efecahgaobadfmaecclkfnfdfmincbmm';
+const NEW_TOOL_IDS = new Set(['macro-recorder']);
+const SITE_DESCRIPTION = 'Toolboard is a Chrome extension with inspect, capture, enhance, utilities, converters, previewers, and AI tools.';
+const SITE_FAQ_DESCRIPTION = "Toolboard is a Chrome extension that provides browser-native tools for inspection, capture, enhancement, utilities, conversion, preview, and AI workflows.";
 const CATEGORY_PLAYBOOK = {
   inspect: {
     objective: 'audit and verify on-page implementation details',
@@ -155,10 +158,11 @@ function mapTools(raw, localeEn) {
     keywords: Array.isArray(t.keywords) ? t.keywords : [],
     permissions: Array.isArray(t.permissions) ? t.permissions : [],
     order: typeof t.order === 'number' ? t.order : Number.MAX_SAFE_INTEGER,
-    module: t.module || ''
+    module: t.module || '',
+    isNew: NEW_TOOL_IDS.has(t.id)
   }));
 
-  mapped.sort((a, b) => (a.order - b.order) || a.name.localeCompare(b.name));
+  mapped.sort((a, b) => Number(b.isNew) - Number(a.isNew) || (a.order - b.order) || a.name.localeCompare(b.name));
 
   return {
     generatedAt: new Date().toISOString(),
@@ -600,7 +604,7 @@ function buildHomeJsonLd(data) {
     '@type': 'WebSite',
     name: 'Toolboard',
     url: SITE_URL,
-    description: 'Toolboard is a Chrome extension with 82 tools across inspect, capture, enhance, utilities, converters, previewers, and AI.',
+    description: SITE_DESCRIPTION,
     potentialAction: {
       '@type': 'SearchAction',
       target: `${SITE_URL}/?q={search_term_string}`,
@@ -658,7 +662,7 @@ function buildHomeJsonLd(data) {
         name: 'What is Toolboard?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Toolboard is a Chrome extension that provides 82 tools for inspection, capture, enhancement, utilities, conversion, preview, and AI workflows.'
+          text: SITE_FAQ_DESCRIPTION
         }
       },
       {
