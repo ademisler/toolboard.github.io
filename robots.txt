@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: toolboard.ademisler.com
+Sitemap: https://toolboard.ademisler.com/sitemap.xml

@@ -1,0 +1,110 @@
+---
+layout: default
+title: "Toolboard - Web Productivity Tools for Chrome"
+description: "Toolboard is a Chrome extension with inspect, capture, enhance, utilities, converters, previewers, and AI tools."
+canonical: "https://toolboard.ademisler.com/"
+---
+
+<header class="header">
+  <div class="header-content">
+    <a href="https://chromewebstore.google.com/detail/efecahgaobadfmaecclkfnfdfmincbmm" class="logo" title="Install Toolboard on Chrome">
+      <span class="logo-text">Toolboard</span>
+      <span class="version-badge">V3.0.1</span>
+    </a>
+
+    <div class="search-bar">
+      <div class="search-bar__input">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input id="tool-search" type="search" placeholder="Search tools, categories, tags..." autocomplete="off" spellcheck="false">
+      </div>
+      <div style="position: relative;">
+        <button id="category-menu-btn" class="category-menu-btn" type="button">
+          <span>All Categories</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div id="category-menu" class="category-menu"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="search-feedback">
+      <div id="search-chips" class="search-chips"></div>
+      <span id="search-result-count" class="search-feedback__count"></span>
+    </div>
+  </div>
+</header>
+
+<section class="hero-section">
+  <div class="container hero-content">
+    {% include home-jsonld.html %}
+    <h1>Web productivity tools in one Chrome extension</h1>
+    <p>
+      Toolboard brings inspect, capture, enhance, utilities, converters, previewers, and AI tools into one fast extension.
+    </p>
+    <div class="cta-buttons">
+      <a class="btn btn-primary btn-large" href="https://chromewebstore.google.com/detail/efecahgaobadfmaecclkfnfdfmincbmm" target="_blank" rel="noopener">Install from Chrome Web Store</a>
+      <a class="btn btn-secondary btn-large" href="#tools">Browse Tools</a>
+    </div>
+    <p><a href="https://buymeacoffee.com/ademisler" target="_blank" rel="noopener">Support Toolboard with a coffee</a></p>
+    <div id="stats-grid" class="stats-grid"></div>
+    <div id="quick-categories" class="quick-categories"></div>
+  </div>
+</section>
+
+<section id="tools" class="container" style="padding-bottom: 24px;">
+  <div class="tools-head">
+    <h2>Popup Catalog Preview</h2>
+    <p>This section mirrors the extension popup flow: search, filter, and 6 tools per page.</p>
+  </div>
+  <div class="popup-catalog-shell">
+    <div id="tools-grid" class="tools-grid"></div>
+    <div id="tools-pagination" class="tools-pagination" hidden>
+      <button id="tools-prev-page" class="pagination-btn" type="button" aria-label="Previous page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div class="pagination-state">
+        <span id="tools-current-page">1</span>
+        <span>/</span>
+        <span id="tools-total-pages">1</span>
+      </div>
+      <button id="tools-next-page" class="pagination-btn" type="button" aria-label="Next page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="container" style="padding-bottom: 36px;">
+  {% include category-links.html %}
+</section>
+
+<section class="container" style="padding-bottom: 36px;">
+  {% include tool-links.html %}
+</section>
+
+<div id="tool-modal" class="tool-modal" aria-hidden="true">
+  <div class="tool-modal-content">
+    <div class="tool-modal-header">
+      <div class="tool-modal-title">
+        <div class="tool-card__icon" id="tool-modal-icon"></div>
+        <div>
+          <h2 id="tool-modal-title">Tool</h2>
+          <span id="tool-modal-category" class="tool-card__category">Category</span>
+        </div>
+      </div>
+      <button id="tool-modal-close" class="tool-modal-close" type="button" aria-label="Close modal">✕</button>
+    </div>
+    <div class="tool-modal-body">
+      <p id="tool-modal-description" class="tool-modal-description"></p>
+      <div class="tool-modal-features">
+        <h4>Metadata</h4>
+        <ul id="tool-modal-features"></ul>
+      </div>
+      <div class="tool-modal-actions">
+        <a id="tool-modal-page-link" class="btn btn-secondary" href="#">Open Tool Page</a>
+        <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/efecahgaobadfmaecclkfnfdfmincbmm" target="_blank" rel="noopener">Install Toolboard</a>
+      </div>
+    </div>
+  </div>
+</div>

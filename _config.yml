@@ -1,0 +1,43 @@
+title: "Toolboard - Web Productivity Tools for Chrome"
+description: "Toolboard is a Chrome extension with inspect, capture, enhance, utilities, converters, previewers, and AI tools."
+keywords: "chrome extension, web productivity tools, inspect tools, capture tools, converters, previewers, ai tools"
+url: "https://toolboard.ademisler.com"
+baseurl: ""
+lang: "en"
+logo: "/assets/images/favicon-512x512.png"
+timezone: "Europe/Istanbul"
+encoding: "utf-8"
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+author: "Adem Isler"
+twitter_username: "idemasler"
+
+social:
+  name: "Toolboard"
+  links:
+    - "https://ademisler.com/en"
+    - "https://buymeacoffee.com/ademisler"
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      author: "Adem Isler"
+      image: "/assets/images/favicon-512x512.png"
+
+exclude:
+  - README.md
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - .DS_Store
